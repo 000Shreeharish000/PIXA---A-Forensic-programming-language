@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+    <style>
+      .t{font-size:15px;font-weight:600;fill:#0f172a}
+      .s{font-size:12px;fill:#334155}
+      .h{font-size:12px;font-weight:700;fill:#64748b;letter-spacing:1px}
+      .l{stroke:#475569;stroke-width:1.6;fill:none;marker-end:url(#a)}
+    </style>
+  </defs>
+  <rect width="960" height="640" fill="#f8fafc"/>
+  <text x="480" y="34" text-anchor="middle" style="font-size:22px;font-weight:700;fill:#0f172a">PIXA — Architecture</text>
+  <text x="480" y="54" text-anchor="middle" class="s">Forensic scripting language: source → tokens → AST → cited findings</text>
+
+  <!-- Inputs -->
+  <text x="40" y="90" class="h">INPUTS</text>
+  <rect x="40" y="100" width="250" height="90" rx="10" fill="#e0f2fe" stroke="#0284c7"/>
+  <text x="165" y="128" text-anchor="middle" class="t">PIXA scripts (.pxa)</text>
+  <text x="165" y="150" text-anchor="middle" class="s">beacon_hunt · triage</text>
+  <text x="165" y="168" text-anchor="middle" class="s">insider_usb · telemetry_audit</text>
+
+  <rect x="40" y="215" width="250" height="110" rx="10" fill="#fef3c7" stroke="#d97706"/>
+  <text x="165" y="243" text-anchor="middle" class="t">Evidence (read-only)</text>
+  <text x="165" y="265" text-anchor="middle" class="s">events · processes · netflow</text>
+  <text x="165" y="283" text-anchor="middle" class="s">fleet.json</text>
+  <text x="165" y="301" text-anchor="middle" class="s">threat-intel: IPs, hashes</text>
+
+  <!-- Language core -->
+  <text x="340" y="90" class="h">LANGUAGE CORE  (pixa/)</text>
+  <rect x="330" y="100" width="300" height="470" rx="14" fill="#ffffff" stroke="#94a3b8" stroke-dasharray="6 4"/>
+
+  <rect x="360" y="120" width="240" height="70" rx="10" fill="#ede9fe" stroke="#7c3aed"/>
+  <text x="480" y="148" text-anchor="middle" class="t">Lexer  · lexer.py</text>
+  <text x="480" y="168" text-anchor="middle" class="s">positions, escapes, regex literals</text>
+
+  <rect x="360" y="225" width="240" height="70" rx="10" fill="#ede9fe" stroke="#7c3aed"/>
+  <text x="480" y="253" text-anchor="middle" class="t">Parser  · parser.py</text>
+  <text x="480" y="273" text-anchor="middle" class="s">recursive descent → nested-dict AST</text>
+
+  <rect x="360" y="330" width="240" height="95" rx="10" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="480" y="358" text-anchor="middle" class="t">Runtime  · runtime.py</text>
+  <text x="480" y="378" text-anchor="middle" class="s">interpreter · pipeline stages</text>
+  <text x="480" y="396" text-anchor="middle" class="s">provenance tracking · reports</text>
+
+  <rect x="360" y="460" width="240" height="70" rx="10" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="480" y="488" text-anchor="middle" class="t">Builtins  · builtins.py</text>
+  <text x="480" y="508" text-anchor="middle" class="s">hashing · entropy · IP class · time</text>
+
+  <!-- Interfaces / outputs -->
+  <text x="670" y="90" class="h">INTERFACES &amp; OUTPUT</text>
+  <rect x="670" y="100" width="250" height="100" rx="10" fill="#fee2e2" stroke="#dc2626"/>
+  <text x="795" y="128" text-anchor="middle" class="t">CLI  · cli.py</text>
+  <text x="795" y="150" text-anchor="middle" class="s">run · compile · lint · env · serve</text>
+  <text x="795" y="168" text-anchor="middle" class="s">python -m pixa</text>
+
+  <rect x="670" y="225" width="250" height="100" rx="10" fill="#fee2e2" stroke="#dc2626"/>
+  <text x="795" y="253" text-anchor="middle" class="t">Console API  · serve.py</text>
+  <text x="795" y="275" text-anchor="middle" class="s">127.0.0.1:8787 (loopback only)</text>
+  <text x="795" y="293" text-anchor="middle" class="s">/api/run · compile · state · health</text>
+
+  <rect x="670" y="350" width="250" height="80" rx="10" fill="#fee2e2" stroke="#dc2626"/>
+  <text x="795" y="378" text-anchor="middle" class="t">Operator Console</text>
+  <text x="795" y="398" text-anchor="middle" class="s">console/index.html (browser UI)</text>
+
+  <rect x="670" y="460" width="250" height="110" rx="10" fill="#fef9c3" stroke="#ca8a04"/>
+  <text x="795" y="488" text-anchor="middle" class="t">Cited findings &amp; reports</text>
+  <text x="795" y="510" text-anchor="middle" class="s">every finding names its source</text>
+  <text x="795" y="528" text-anchor="middle" class="s">timeline · JSON · reproducible runs</text>
+
+  <!-- Arrows -->
+  <path class="l" d="M290 145 H340 V155 H360"/>
+  <path class="l" d="M480 190 V225"/>
+  <path class="l" d="M480 295 V330"/>
+  <path class="l" d="M480 425 V460"/>
+  <path class="l" d="M290 270 H320 V378 H360"/>
+  <path class="l" d="M630 150 H670"/>
+  <path class="l" d="M795 200 V225"/>
+  <path class="l" d="M795 325 V350"/>
+  <path class="l" d="M600 395 H640 V510 H670"/>
+
+  <text x="480" y="610" text-anchor="middle" class="s">CLI and Console API both call the same compile_source / run_source entry points in the runtime.</text>
+</svg>
