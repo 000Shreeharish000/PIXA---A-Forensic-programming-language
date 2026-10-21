@@ -1,7 +1,5 @@
 # PIXA
 
-![GUI Screenshot](deck/assets/console-investigate.png)
-
 **A forensic scripting language and analysis console for computer and network
 investigation.**
 
